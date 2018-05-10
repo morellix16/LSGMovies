@@ -10,9 +10,23 @@ import UIKit
 
 class FavoritesViewController: UITableViewController {
 
+    var moviesManager =  MovieManager()
+    var database:FMDatabase = SQLiteSingleton.getInstance()
+    var arrayFavMovies:Array<Movie> = Array<Movie>()
+    var arrayMovies:Array<Movie> = Array<Movie>()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let queue = DispatchQueue.global(qos: .userInitiated)
+        queue.sync {
+            arrayMovies = moviesManager.readMovies(database)
+        }
+        
+        arrayFavMovies = moviesManager.getFavorites(database, arrayMovies)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +43,27 @@ class FavoritesViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayFavMovies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favCell", for: indexPath)
 
-        // Configure the cell...
+        let mov:Movie = arrayFavMovies[indexPath.row]
+        
+        cell.textLabel?.text = mov.name
+        
+        cell.detailTextLabel?.text = mov.director
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

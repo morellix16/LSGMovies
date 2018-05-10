@@ -15,6 +15,8 @@
 		2F599A67209E11FE002861DA /* SQLiteSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A66209E11FE002861DA /* SQLiteSingleton.swift */; };
 		2F599A69209E14EB002861DA /* MovieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A68209E14EB002861DA /* MovieDAO.swift */; };
 		2F599A6B209E3A9D002861DA /* SingleMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A6A209E3A9D002861DA /* SingleMovieViewController.swift */; };
+		E2664CA720A33C5E00226588 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2664CA620A33C5E00226588 /* Favorite.swift */; };
+		E296D9DC20A4660C00975AD8 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296D9DB20A4660C00975AD8 /* AddMovieViewController.swift */; };
 		EF02922D205815E500C38C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF02922C205815E500C38C7F /* AppDelegate.swift */; };
 		EF029232205815E500C38C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF029230205815E500C38C7F /* Main.storyboard */; };
 		EF029234205815E500C38C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF029233205815E500C38C7F /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		2F599A66209E11FE002861DA /* SQLiteSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteSingleton.swift; sourceTree = "<group>"; };
 		2F599A68209E14EB002861DA /* MovieDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDAO.swift; sourceTree = "<group>"; };
 		2F599A6A209E3A9D002861DA /* SingleMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMovieViewController.swift; sourceTree = "<group>"; };
+		E2664CA620A33C5E00226588 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		E296D9DB20A4660C00975AD8 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		EF029229205815E500C38C7F /* LSGMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSGMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF02922C205815E500C38C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF029231205815E500C38C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				2F57B5BD20987FBD00973C5E /* MoviesViewController.swift */,
 				2F57B5BF20987FE300973C5E /* FavoritesViewController.swift */,
 				2F599A6A209E3A9D002861DA /* SingleMovieViewController.swift */,
+				E296D9DB20A4660C00975AD8 /* AddMovieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2F57B5C120987FF500973C5E /* Movie.swift */,
+				E2664CA620A33C5E00226588 /* Favorite.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,12 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF02932120581FB700C38C7F /* FMResultSet.m in Sources */,
+				E2664CA720A33C5E00226588 /* Favorite.swift in Sources */,
 				EF02932220581FB700C38C7F /* FMDatabasePool.m in Sources */,
 				2F599A6B209E3A9D002861DA /* SingleMovieViewController.swift in Sources */,
 				2F57B5C42098800600973C5E /* MovieManager.swift in Sources */,
 				2F57B5C220987FF500973C5E /* Movie.swift in Sources */,
 				2F57B5C020987FE300973C5E /* FavoritesViewController.swift in Sources */,
 				2F599A69209E14EB002861DA /* MovieDAO.swift in Sources */,
+				E296D9DC20A4660C00975AD8 /* AddMovieViewController.swift in Sources */,
 				EF02932620581FB700C38C7F /* FMDatabaseQueue.m in Sources */,
 				EF02932520581FB700C38C7F /* FMDatabase.m in Sources */,
 				2F599A67209E11FE002861DA /* SQLiteSingleton.swift in Sources */,

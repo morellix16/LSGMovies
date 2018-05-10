@@ -10,6 +10,47 @@ import Foundation
 
 class MovieManager: movieDAO {
     
+    func getFavorites(_ database: FMDatabase, _ arrayMov:Array<Movie>) -> Array<Movie> {
+        var arrayFav:Array<Favorite> = Array()
+        var arrayResult:Array<Movie> = Array()
+        
+        if database.open() {
+            let query = "SELECT * FROM favorites"
+            let result:FMResultSet = try! database.executeQuery(query, values: nil)
+            
+            while(result.next()){
+                let fav = Favorite(id_fav: Int(result.int(forColumnIndex: 0)), id_movie: (Int(result.int(forColumnIndex: 1))))
+                arrayFav.append(fav)
+            }
+            result.close()
+            database.close()
+        }
+        for movie in arrayMov{
+            let auxMovie = movie
+            for fav in arrayFav{
+                if fav.id_movie == auxMovie.id{
+                    arrayResult.append(auxMovie)
+                }
+            }
+        }
+          	
+        
+        return arrayResult
+    }
+    
+    
+    func removeFav(_ database: FMDatabase, recordToDelete: Favorite) -> Bool {
+        var result = false
+        if database.open(){
+            let deleteFav = "DELETE FROM favorites WHERE id_movie=?"
+            let data:Array=["\((recordToDelete).id_movie)"]
+            result = database.executeUpdate(deleteFav, withArgumentsIn: data)
+            database.close()
+        }
+        return result
+    }
+    
+    
     func insertMovie(_ database: FMDatabase, newRecord: AnyObject) -> Bool {
         var result = false
         if database.open() {
@@ -25,12 +66,13 @@ class MovieManager: movieDAO {
         var result = false
         if database.open() {
             let insertMovie = "INSERT INTO favorites VALUES(null,?)"
-            let data:Array=["\((newRecord as! Movie).id!)"]
+            let data:Array=["\((newRecord).id!)"]
             result = database.executeUpdate(insertMovie, withArgumentsIn: data)
             database.close()
         }
         return result
     }
+  
     
     func readMovies(_ database: FMDatabase) -> Array<Movie> {
         var arrayResult:Array<Movie> = Array()
@@ -48,16 +90,5 @@ class MovieManager: movieDAO {
         }
         return arrayResult
     }
-    
-    func removeFav(_ database: FMDatabase, recordToDelete: AnyObject) -> Bool {
-        return true
-    }
-    
-    func comprobarFav(_ database: FMDatabase, recordToDelete: AnyObject) -> Bool {
-        return true
-    }
-    
-    
-    
     
 }
