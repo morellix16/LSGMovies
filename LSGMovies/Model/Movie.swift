@@ -11,11 +11,11 @@ import Foundation
 struct Movie {
     
     var id:Int?
-    var name:String 
-    var director:String
-    var description:String
-    var year:Int
-    var note:Double
+    var name:String?
+    var director:String?
+    var description:String?
+    var year:Int?
+    var note:Double?
     
     init() {
         id = nil

@@ -55,7 +55,7 @@ class MovieManager: movieDAO {
         var result = false
         if database.open() {
             let insertMovie = "INSERT INTO movie VALUES(null,?,?,?,?,?)"
-            let data:Array=["\((newRecord as! Movie).name)","\((newRecord as! Movie).director)","\((newRecord as! Movie).description)","\((newRecord as! Movie).year)","\((newRecord as! Movie).note)"]
+            let data:Array=["\((newRecord as! Movie).name!)","\((newRecord as! Movie).director!)","\((newRecord as! Movie).description!)","\((newRecord as! Movie).year!)","\((newRecord as! Movie).note!)"]
             result = database.executeUpdate(insertMovie, withArgumentsIn: data)
             database.close()
         }
