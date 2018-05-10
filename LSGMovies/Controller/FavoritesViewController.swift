@@ -15,16 +15,20 @@ class FavoritesViewController: UITableViewController {
     var arrayFavMovies:Array<Movie> = Array<Movie>()
     var arrayMovies:Array<Movie> = Array<Movie>()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
         let queue = DispatchQueue.global(qos: .userInitiated)
         queue.sync {
             arrayMovies = moviesManager.readMovies(database)
         }
         
         arrayFavMovies = moviesManager.getFavorites(database, arrayMovies)
+        tableView.reloadData()
+
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -73,17 +77,21 @@ class FavoritesViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
+            let auxMov = arrayFavMovies[indexPath.row]
+            if moviesManager.removeFav(database, recordToDelete: auxMov){
+                arrayFavMovies.remove(at : indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        } /*else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }   */
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

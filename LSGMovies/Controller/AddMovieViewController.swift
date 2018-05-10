@@ -93,13 +93,23 @@ class AddMovieViewController: UIViewController {
         if let intYear = Int(year) {
             newMovie.year = intYear
         }else{
-            newMovie.year = nil
+            let alertController = UIAlertController(title: "Upsie", message: "Debe introducir un numero", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Aceptar", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            present(alertController, animated: true, completion: nil)
+            return
         }
         
         if let doubleNote = Double(note){
             newMovie.note = doubleNote
         }else{
-            newMovie.note = nil
+            let alertController = UIAlertController(title: "Upsie", message: "Debe introducir un numero", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Aceptar", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            present(alertController, animated: true, completion: nil)
+            return
         }
         
         
@@ -110,6 +120,7 @@ class AddMovieViewController: UIViewController {
         }
         
     }
+    
     
     func showMessageToast(_ msg:String) {
         

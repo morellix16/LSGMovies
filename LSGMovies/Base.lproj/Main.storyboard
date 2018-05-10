@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="66d-s7-ArF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="66d-s7-ArF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,14 +82,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inserta una película" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcF-Tv-6dx">
-                                <rect key="frame" x="16" y="36" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcF-Tv-6dx">
+                                <rect key="frame" x="16" y="52" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agK-D6-Ptj">
-                                <rect key="frame" x="16" y="89" width="343" height="50"/>
+                                <rect key="frame" x="16" y="84" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8RU-In-SsO"/>
                                 </constraints>
@@ -98,7 +98,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Director" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CV0-QV-dFA">
-                                <rect key="frame" x="16" y="155" width="343" height="50"/>
+                                <rect key="frame" x="16" y="150" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pVW-hw-gcB"/>
                                 </constraints>
@@ -107,7 +107,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agt-mG-F6a">
-                                <rect key="frame" x="16" y="221" width="343" height="50"/>
+                                <rect key="frame" x="16" y="216" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vID-mh-7nz"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Año" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLr-17-mdC">
-                                <rect key="frame" x="16" y="287" width="343" height="50"/>
+                                <rect key="frame" x="16" y="282" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pWv-VG-Nzy"/>
                                 </constraints>
@@ -125,7 +125,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Puntuación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6m-9M-odR">
-                                <rect key="frame" x="16" y="353" width="343" height="50"/>
+                                <rect key="frame" x="16" y="348" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mpG-GR-ThJ"/>
                                 </constraints>
@@ -134,7 +134,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-dr-bYk">
-                                <rect key="frame" x="16" y="435" width="343" height="50"/>
+                                <rect key="frame" x="16" y="430" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.5008315284" green="0.63309728129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C51-Us-RaA"/>
@@ -146,6 +146,19 @@
                                     <action selector="insertMovie:" destination="Wf9-K5-uqB" eventType="touchUpInside" id="xcZ-LR-8Sr"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBT-Xb-wwe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Inserta una peli" id="IGN-EW-GcV">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3gt-yz-Mae">
+                                            <connections>
+                                                <segue destination="hzr-Sw-tFI" kind="unwind" unwindAction="goBackWithSegue:" id="Ra7-6d-9wq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -163,7 +176,7 @@
                             <constraint firstItem="agK-D6-Ptj" firstAttribute="top" secondItem="QcF-Tv-6dx" secondAttribute="bottom" constant="32" id="esh-6Q-vIk"/>
                             <constraint firstItem="5dg-L6-7Ds" firstAttribute="trailing" secondItem="r6m-9M-odR" secondAttribute="trailing" constant="16" id="fUK-az-cHv"/>
                             <constraint firstItem="5dg-L6-7Ds" firstAttribute="trailing" secondItem="QcF-Tv-6dx" secondAttribute="trailing" constant="16" id="nf5-rt-yte"/>
-                            <constraint firstItem="QcF-Tv-6dx" firstAttribute="top" secondItem="5dg-L6-7Ds" secondAttribute="top" constant="16" id="niG-FV-ePW"/>
+                            <constraint firstItem="QcF-Tv-6dx" firstAttribute="top" secondItem="5dg-L6-7Ds" secondAttribute="top" constant="32" id="niG-FV-ePW"/>
                             <constraint firstItem="agt-mG-F6a" firstAttribute="leading" secondItem="5dg-L6-7Ds" secondAttribute="leading" constant="16" id="oBP-Wv-4CK"/>
                             <constraint firstItem="5dg-L6-7Ds" firstAttribute="trailing" secondItem="qLr-17-mdC" secondAttribute="trailing" constant="16" id="q0s-Ag-6DB"/>
                             <constraint firstItem="r6m-9M-odR" firstAttribute="leading" secondItem="5dg-L6-7Ds" secondAttribute="leading" constant="16" id="s7V-ci-tgq"/>
@@ -174,6 +187,7 @@
                         <viewLayoutGuide key="safeArea" id="5dg-L6-7Ds"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="WFU-9j-FqH"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="et_description" destination="agt-mG-F6a" id="yjQ-ki-WU2"/>
@@ -184,6 +198,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65W-DI-jEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hzr-Sw-tFI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="-960.2698650674663"/>
         </scene>
@@ -232,7 +247,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="dgv-py-GOY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3zQ-Oe-XDE">
                             <connections>
-                                <segue destination="Wf9-K5-uqB" kind="presentation" id="RnC-2E-f7d"/>
+                                <segue destination="Wf9-K5-uqB" kind="presentation" id="goJ-bh-T8u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -33,17 +33,15 @@ class MovieManager: movieDAO {
                 }
             }
         }
-          	
-        
         return arrayResult
     }
     
     
-    func removeFav(_ database: FMDatabase, recordToDelete: Favorite) -> Bool {
+    func removeFav(_ database: FMDatabase, recordToDelete: Movie) -> Bool {
         var result = false
         if database.open(){
             let deleteFav = "DELETE FROM favorites WHERE id_movie=?"
-            let data:Array=["\((recordToDelete).id_movie)"]
+            let data:Array=["\((recordToDelete).id!)"]
             result = database.executeUpdate(deleteFav, withArgumentsIn: data)
             database.close()
         }
