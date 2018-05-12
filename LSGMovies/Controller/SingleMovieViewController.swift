@@ -25,10 +25,14 @@ class SingleMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        var añoText = "\(String(describing: movie!.year ?? 0))"
+        var puntuacionText = "\(String(describing: movie!.note ?? 0))"
+        
         titulo?.text = movie?.name
         director?.text = movie?.director
-        año?.text = "Año: \(String(describing: movie!.year))"
-        puntuacion?.text = "Puntuación: \(String(describing: movie!.note))"
+        año!.text = "Año: \(añoText)"
+        puntuacion!.text = "Puntuación: \(puntuacionText)"
         descripcion?.text = movie?.description
         
 
@@ -42,11 +46,17 @@ class SingleMovieViewController: UIViewController {
     
     @IBAction func addFav(_ sender: Any) {
         
-        if moviesManager.addToFav(database, newRecord: movie!) {
-            mostrarMsgFav("Añadida a favoritos")
-        }else{
-            mostrarMsgFav("Ha ocurrido un error, intentelo de nuevo")
+        if moviesManager.checkFav(database, movieToCheck: movie!){
+            mostrarMsgFav("Ya la tienes!")
+        } else {
+            
+            if moviesManager.addToFav(database, newRecord: movie!) {
+                mostrarMsgFav("Añadida a favoritos")
+            }else{
+                mostrarMsgFav("Ha ocurrido un error, intentelo de nuevo")
+            }
         }
+        
         
     }
     

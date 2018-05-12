@@ -16,5 +16,6 @@ protocol movieDAO {
     func readMovies(_ database:FMDatabase)->Array<Movie>
     func removeFav(_ database:FMDatabase, recordToDelete:Movie)->Bool
     func getFavorites(_ database:FMDatabase, _ arrayMov:Array<Movie>) -> Array <Movie>
+    func checkFav(_ database:FMDatabase, movieToCheck:Movie)->Bool
     
 }

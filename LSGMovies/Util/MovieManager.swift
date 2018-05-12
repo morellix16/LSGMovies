@@ -89,4 +89,21 @@ class MovieManager: movieDAO {
         return arrayResult
     }
     
+    func checkFav(_ database:FMDatabase, movieToCheck:Movie)->Bool {
+        
+        if database.open() {
+            let queryMovie = "SELECT id_movie FROM favorites where id_movie = \((movieToCheck).id!)"
+            let data:Array=["\((movieToCheck).id!)"]
+            let result:FMResultSet = try! database.executeQuery(queryMovie, values: nil)
+            
+            if result.next() {
+                database.close()
+                return true;
+            }
+        }
+        
+        database.close()
+        return false
+    }
+    
 }
