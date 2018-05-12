@@ -49,10 +49,15 @@ class MoviesViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let movie = segue.destination as? SingleMovieViewController {
-            movie.movie = arrayMovies[(tableView.indexPathForSelectedRow?.row)!]
+        if let navController = segue.destination as? UINavigationController {
+            if let sgvw = navController.visibleViewController as? SingleMovieViewController {
+                sgvw.movie = arrayMovies[(tableView.indexPathForSelectedRow?.row)!]
+            }
+            
         }
     }
+    
+    
     
     
     override func didReceiveMemoryWarning() {
