@@ -44,6 +44,9 @@ class SingleMovieViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
+    
     @IBAction func addFav(_ sender: Any) {
         
         if moviesManager.checkFav(database, movieToCheck: movie!){
@@ -57,6 +60,12 @@ class SingleMovieViewController: UIViewController {
             }
         }
         
+    }
+    
+    
+    @IBAction func backToMain(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     

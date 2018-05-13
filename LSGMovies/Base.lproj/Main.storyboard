@@ -189,7 +189,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65W-DI-jEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hzr-Sw-tFI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1877.5999999999999" y="-960.2698650674663"/>
+            <point key="canvasLocation" x="2828" y="-448"/>
         </scene>
         <!--Movies-->
         <scene sceneID="JrO-Dh-oGl">
@@ -287,27 +287,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7w-sX-3LQ">
-                                <rect key="frame" x="16" y="420" width="343" height="30"/>
-                                <state key="normal" title="Añadir a favoritos"/>
-                                <connections>
-                                    <action selector="addFav:" destination="wz0-Mm-9WO" eventType="touchUpInside" id="e37-Ip-2BR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C7w-sX-3LQ" firstAttribute="top" secondItem="l6t-En-GED" secondAttribute="bottom" constant="41" id="0Bl-Ja-ahf"/>
                             <constraint firstItem="qA8-YS-3Jf" firstAttribute="top" secondItem="yyv-RT-E5L" secondAttribute="top" constant="40" id="22j-aI-SBs"/>
                             <constraint firstItem="yyv-RT-E5L" firstAttribute="trailing" secondItem="qA8-YS-3Jf" secondAttribute="trailing" constant="16" id="43B-Ia-7MH"/>
                             <constraint firstItem="q7P-CY-SEq" firstAttribute="top" secondItem="q5o-QV-PWy" secondAttribute="bottom" constant="15" id="6Fv-6C-4Rt"/>
-                            <constraint firstItem="C7w-sX-3LQ" firstAttribute="leading" secondItem="l6t-En-GED" secondAttribute="leading" id="8ic-Ha-04Y"/>
                             <constraint firstItem="l6t-En-GED" firstAttribute="leading" secondItem="yyv-RT-E5L" secondAttribute="leading" constant="16" id="949-zg-WO1"/>
                             <constraint firstItem="qA8-YS-3Jf" firstAttribute="leading" secondItem="yyv-RT-E5L" secondAttribute="leading" constant="16" id="AD0-qB-hiy"/>
                             <constraint firstItem="yyv-RT-E5L" firstAttribute="trailing" secondItem="AYc-Xy-fN7" secondAttribute="trailing" constant="16" id="D5E-Oy-iST"/>
                             <constraint firstItem="l6t-En-GED" firstAttribute="top" secondItem="q7P-CY-SEq" secondAttribute="bottom" constant="15" id="D5X-R3-Qbr"/>
                             <constraint firstItem="q5o-QV-PWy" firstAttribute="leading" secondItem="yyv-RT-E5L" secondAttribute="leading" constant="16" id="GLF-aU-jts"/>
-                            <constraint firstItem="C7w-sX-3LQ" firstAttribute="trailing" secondItem="l6t-En-GED" secondAttribute="trailing" id="H04-6F-5Kl"/>
                             <constraint firstItem="yyv-RT-E5L" firstAttribute="trailing" secondItem="q7P-CY-SEq" secondAttribute="trailing" constant="16" id="Jv6-ud-whi"/>
                             <constraint firstItem="q5o-QV-PWy" firstAttribute="top" secondItem="AYc-Xy-fN7" secondAttribute="bottom" constant="8" id="Qrp-gs-jeu"/>
                             <constraint firstItem="AYc-Xy-fN7" firstAttribute="leading" secondItem="yyv-RT-E5L" secondAttribute="leading" constant="16" id="SnG-N8-mwf"/>
@@ -318,7 +308,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yyv-RT-E5L"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rbM-oT-trX"/>
+                    <navigationItem key="navigationItem" id="rbM-oT-trX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7fA-Nv-Wft">
+                            <connections>
+                                <action selector="backToMain:" destination="wz0-Mm-9WO" id="PrI-qh-UdS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Añadir a favoritos" id="G5Q-o3-g61">
+                            <connections>
+                                <action selector="addFav:" destination="wz0-Mm-9WO" id="eid-8d-Aja"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="año" destination="q5o-QV-PWy" id="J68-Ut-oHu"/>
                         <outlet property="descripcion" destination="l6t-En-GED" id="6Bh-VS-6pI"/>
@@ -329,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9V-cA-NnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3680.8000000000002" y="-221.73913043478262"/>
+            <point key="canvasLocation" x="3758" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gD7-lc-Ud0">
@@ -385,7 +386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpz-Iw-jdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2741.5999999999999" y="-221.73913043478262"/>
+            <point key="canvasLocation" x="2828" y="313"/>
         </scene>
     </scenes>
 </document>
